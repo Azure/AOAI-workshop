@@ -1,0 +1,16 @@
+pandas
+tiktoken
+scikit-learn
+python-dotenv
+matplotlib
+plotly
+langchain==0.0.300
+langchain-experimental
+openai==0.27.6
+pypdf
+faiss-cpu
+IPython
+ipykernel
+azure-cognitiveservices-speech
+azure-ai-vision
+pymssql
