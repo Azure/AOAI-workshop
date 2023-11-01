@@ -4,9 +4,12 @@ scikit-learn
 python-dotenv
 matplotlib
 plotly
-langchain==0.0.300
 langchain-experimental
-openai==0.27.6
+langchain==0.0.300
+openai==0.27.8
+wget==3.2
+azure-identity==1.14.0
+azure-search-documents==11.4.0b6
 pypdf
 faiss-cpu
 IPython
@@ -14,5 +17,4 @@ ipykernel
 azure-cognitiveservices-speech
 azure-ai-vision
 pymssql
-azure-core
-azure-search-documents
+azure.storage.blob
