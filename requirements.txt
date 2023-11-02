@@ -18,3 +18,6 @@ azure-cognitiveservices-speech
 azure-ai-vision
 pymssql
 azure.storage.blob
+azure-kusto.data
+cohere
+unstructured
