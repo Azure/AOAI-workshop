@@ -5,8 +5,8 @@ python-dotenv
 matplotlib
 plotly
 langchain-experimental
-langchain==0.0.300
-openai==0.27.8
+langchain
+openai
 wget==3.2
 azure-identity==1.14.0
 azure-search-documents==11.4.0b6
@@ -21,3 +21,5 @@ azure.storage.blob
 azure-kusto.data
 cohere
 unstructured
+requests
+pillow 
