@@ -83,7 +83,7 @@ You should get an Azure SQL server with a DB called aworks
 
 # IMPORTANT!
 ### Setup environment variables
-* Rename the '.env.template' file to '.env' and modify all the endpoints and api keys for all openai deployments as follows:
+* Rename the '.env.template' file to '.env' and modify all the endpoints and api keys for all deployments as follows:
 ```
 OPENAI_DEPLOYMENT_ENDPOINT ="<your openai endpoint>" 
 OPENAI_API_KEY = "<your openai api key>"
@@ -94,11 +94,32 @@ OPENAI_MODEL_NAME="<gpt35 model name>"
 OPENAI_ADA_EMBEDDING_DEPLOYMENT_NAME = "<your text embedding ada deployment name>"
 OPENAI_ADA_EMBEDDING_MODEL_NAME = "<your text embedding ada model name>"
 
-OPENAI_DAVINCI_EMBEDDING_DEPLOYMENT_NAME = "<your text embedding ada deployment name>"
-OPENAI_DAVINCI_EMBEDDING_MODEL_NAME = "<your da vinci model name>"
+OPENAI_DAVINCI_DEPLOYMENT_NAME = "<your text embedding ada deployment name>"
+OPENAI_DAVINCI_MODEL_NAME = "<your da vinci model name>"
 
-SQL_SERVER="<your sql server>.database.windows.net"
+SQL_SERVER="<sql server name>.database.windows.net"
 SQL_USER="SqlAdmin"
 SQL_PWD="ChangeYourAdminPassword1"
 SQL_DBNAME="aworks"
+
+# cognitive services speech
+SPEECH_KEY       = "<your speech key>"
+SPEECH_REGION    = "<your speech region>"
+
+AZURE_COMPUTER_VISION_ENDPOINT="<your computer vision endpoint>"
+AZURE_COMPUTER_VISION_KEY="<your computer vision key>"
+AZURE_SEARCH_SERVICE_ENDPOINT="<your search service endpoint>"
+AZURE_SEARCH_INDEX_NAME="<your search index name>"
+AZURE_SEARCH_ADMIN_KEY="<your search admin key>"
+
+AAD_TENANT_ID = "<your aad tenant id>"
+KUSTO_CLUSTER =  "https://<your azure data explorer name>.westeurope.kusto.windows.net"
+KUSTO_DATABASE = "<your kusto database name>"
+KUSTO_TABLE = "wikipedia"
+KUSTO_MANAGED_IDENTITY_APP_ID = "<your aad app registration id>"
+KUSTO_MANAGED_IDENTITY_SECRET = "<your kusto managed identity secret>"
+
+OPENAI_DALLE_ENDPOINT = "<your openai dalle endpoint>"
+OPENAI_DALLE_API_KEY = "<your openai dalle api key>"
+OPENAI_DALLE_DEPLOYMENT_NAME = "<your openai dalle model name>"
 ```
