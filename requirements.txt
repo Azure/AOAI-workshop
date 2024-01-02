@@ -23,3 +23,4 @@ cohere
 unstructured
 requests
 pillow 
+youtube-transcript-api
