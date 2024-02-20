@@ -4,8 +4,8 @@ scikit-learn
 python-dotenv
 matplotlib
 plotly
-langchain-experimental
-langchain
+langchain==0.0.336
+langchain-experimental==0.0.20
 openai
 wget==3.2
 azure-identity==1.14.0
@@ -15,7 +15,7 @@ faiss-cpu
 IPython
 ipykernel
 azure-cognitiveservices-speech
-azure-ai-vision
+azure-ai-vision==0.13.0b1
 pymssql
 azure.storage.blob
 azure-kusto.data
