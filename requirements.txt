@@ -18,7 +18,7 @@ azure-cognitiveservices-speech
 azure-ai-vision==0.13.0b1
 pymssql
 azure.storage.blob
-azure-kusto.data
+azure-kusto-data
 cohere
 unstructured
 requests
