@@ -60,6 +60,9 @@ param openai_deployments array = [
 // AI Search params
 param aisearch_name string = 'aisearch-${uniqueString(resourceGroup().id)}'
 
+// AI Vision params
+param aivision_name string = 'aivision-${uniqueString(resourceGroup().id)}'
+
 resource sqlServer 'Microsoft.Sql/servers@2021-02-01-preview' = {
   name: serverName
   location: location
@@ -146,5 +149,19 @@ resource search 'Microsoft.Search/searchServices@2020-08-01' = {
   properties: {
     replicaCount: 1
     partitionCount: 1
+  }
+}
+
+resource vision 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
+  name: aivision_name
+  location: location
+  sku: {
+    name: 'S0'
+  }
+  kind: 'ComputerVision'
+  properties: {
+    apiProperties: {
+      statisticsEnabled: false
+    }
   }
 }
