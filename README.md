@@ -1,8 +1,5 @@
 # OpenAI workshop 
 
-This is a forked version from the OpenAI workshop  
-Created by: [Denise Schlesinger](https://www.linkedin.com/in/deniseschlesinger/), [Limor Levi](https://www.linkedin.com/in/limor-levi/) and [Vlad Feigin](https://www.linkedin.com/in/vladifeigin/) 
-
 ⚡ Build OpenAI applications to search your own data ⚡  
 This agenda covers a range of topics, from the basics of LLMs and GPT to more advanced topics like prompt engineering and embeddings. The labs provide hands-on experience with OpenAI, including connecting to the platform, creating prompts, and working with embeddings. The final lab even allows participants to ask SQL database questions in English, demonstrating the power of OpenAI in natural language processing.
 
@@ -23,6 +20,7 @@ Part 3 – Code samples walkthrough
 •	Lab #8 - Dall-e image generation  
 
 
+This is a forked version from the OpenAI workshop created by: [Denise Schlesinger](https://www.linkedin.com/in/deniseschlesinger/), [Limor Levi](https://www.linkedin.com/in/limor-levi/) and [Vlad Feigin](https://www.linkedin.com/in/vladifeigin/) 
 
 ## Requirements
 * In order to participate in the workshop you must follow the instructions in the ["0- Requirements folder"](./0-%20Requirements/README.md)
