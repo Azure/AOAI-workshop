@@ -1,5 +1,7 @@
 # OpenAI workshop 
 
+
+
 ⚡ Build OpenAI applications to search your own data ⚡  
 This agenda covers a range of topics, from the basics of LLMs and GPT to more advanced topics like prompt engineering and embeddings. The labs provide hands-on experience with OpenAI, including connecting to the platform, creating prompts, and working with embeddings. The final lab even allows participants to ask SQL database questions in English, demonstrating the power of OpenAI in natural language processing.
 
