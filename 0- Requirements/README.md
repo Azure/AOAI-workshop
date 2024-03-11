@@ -6,6 +6,7 @@ For this workshop you MUST have the following:
 - A virtual environment tool (venv)
 - An Azure account 
 - A subscription onboarded into Azure OpenAI
+- Necessary permissions to deploy resources in the subscription
 
 ## Preparation
 
@@ -55,6 +56,7 @@ For this workshop you MUST have the following:
     * An Azure SQL server with an AdventureWorks sample database
     * An AI Search service
     * An AI Speech service
+    * An AI Vision service
     * An Azure OpenAI service with the following models:
         * GPT-3.5
         * GPT-4
@@ -102,6 +104,12 @@ SQL_PWD="<the password you defined in the bicep file>"
 SPEECH_REGION="westeurope"
 
 SPEECH_KEY="<the key for the speech service>"
+
+# AI Vision details
+VISION_REGION="swedencentral"
+
+VISION_ENDPOINT="<azure ai vision deployment url>"
+VISION_KEY="<the key to the ai vision service>"
 
 # AI Search details
 AZURE_SEARCH_SERVICE_ENDPOINT="<your azure ai search deployment url>"
