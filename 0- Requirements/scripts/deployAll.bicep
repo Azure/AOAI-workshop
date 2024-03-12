@@ -156,7 +156,7 @@ resource vision 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
   name: aivision_name
   location: location
   sku: {
-    name: 'S0'
+    name: 'S1'
   }
   kind: 'ComputerVision'
   properties: {
