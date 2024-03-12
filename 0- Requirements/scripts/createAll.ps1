@@ -1,8 +1,6 @@
-
-$SubscriptionId = '<your subscription here>'
+$SubscriptionId = ''
 $resourceGroupName = "openai-workshop"
-$location = "westeurope"
-
+$location = "swedencentral"
 
 # Set subscription 
 Set-AzContext -SubscriptionId $subscriptionId 
@@ -10,4 +8,3 @@ Set-AzContext -SubscriptionId $subscriptionId
 New-AzResourceGroup -Name $resourceGroupName -Location $location
 
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile deployAll.bicep -WarningAction:SilentlyContinue
-
