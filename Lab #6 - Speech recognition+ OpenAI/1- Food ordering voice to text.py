@@ -14,9 +14,7 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY") 
 OPENAI_DEPLOYMENT_ENDPOINT = os.getenv("OPENAI_DEPLOYMENT_ENDPOINT")
-OPENAI_DEPLOYMENT_NAME = os.getenv("OPENAI_DEPLOYMENT_NAME")
-OPENAI_MODEL_NAME = os.getenv("OPENAI_MODEL_NAME")
-OPENAI_DEPLOYMENT_VERSION = os.getenv("OPENAI_DEPLOYMENT_VERSION")
+OPENAI_GPT35_DEPLOYMENT_NAME = os.getenv("OPENAI_GPT35_DEPLOYMENT_NAME")
 
 client = AzureOpenAI(
   azure_endpoint = OPENAI_DEPLOYMENT_ENDPOINT, 
@@ -42,11 +40,62 @@ def voice_to_text():
     return speech_recognition_result.text
 
 def call_openAI(text):
+
+    system_message = """
+You are an assistant designed to extract entities from a food order transcript. 
+
+Users will enter in a string of text and you will respond with entities you've extracted from the text as a JSON object. 
+
+Here's an example of your output format:
+[  
+    {    
+        main: {      
+            type: "vegan burger",
+            size: "large",
+            cooking_degree: "medium",
+            toppings: [        
+                {
+                    type: "lettuce",
+                    quantity: 1,
+                    size: "small"
+                },        
+                {
+                    type: "tomato",
+                    quantity: 1,
+                    size: ""        
+                },        
+                {
+                    type: "onion",
+                    quantity: 2,
+                    size: ""
+                }      
+            ]
+        },
+        drinks: {
+            type: "pepsi cola",
+            size: "large",
+            additionals: [
+                {
+                    type: "ice",
+                    quantity: 1,
+                    size: "small"
+                },
+                {
+                    type: "lemon",
+                    quantity: 1,
+                    size: ""
+                }  
+            ]
+        }  
+    }
+]
+"""
+
     message_text = [
-        {"role":"system","content":"You are an assistant designed to extract entities from a food order transcript. Users will enter in a string of text and you will respond with entities you\'ve extracted from the text as a JSON object. Here\'s an example of your output format:[  {    main: {      type: \"vegan burger\",      size: \"large\",      cooking_degree: \"medium\",      toppings: [        {          type: \"lettuce\",          quantity: 1,          size: \"small\"        },        {          type: \"tomato\",          quantity: 1,          size: \"\"        },        {          type: \"onion\",          quantity: 2,          size: \"\"        }      ]    },drinks: {  type: \"pepsi cola\",  size: \"large\",  additionals: [{  type: \"ice\",  quantity: 1,  size: \"small\"},{  type: \"lemon\",  quantity: 1,  size: \"\"}  ]}  }]"},
+        {"role":"system","content":system_message},
         {"role":"user","content":text}]
     response = client.chat.completions.create(
-        model=OPENAI_DEPLOYMENT_NAME,
+        model=OPENAI_GPT35_DEPLOYMENT_NAME,
         messages = message_text,
         temperature=0.7,
         max_tokens=800,
