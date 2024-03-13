@@ -21,6 +21,7 @@ Code samples walkthrough
 •	Lab #8 - Dall-e image generation  
 
 
+
 This is a forked version from the OpenAI workshop created by: [Denise Schlesinger](https://www.linkedin.com/in/deniseschlesinger/), [Limor Levi](https://www.linkedin.com/in/limor-levi/) and [Vlad Feigin](https://www.linkedin.com/in/vladifeigin/) 
 
 ## Requirements
