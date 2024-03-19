@@ -11,6 +11,7 @@ param adminPassword string = 'ChangeYourAdminPassword1'
 // Speech Service params
 param SpeechServiceName string = 'aispeech-${uniqueString(resourceGroup().id)}'
 param speech_location string = 'westeurope'
+param vision_location string = 'northeurope'
 
 // OpenAI params
 param OpenAIServiceName string = 'openai-${uniqueString(resourceGroup().id)}'
@@ -154,7 +155,7 @@ resource search 'Microsoft.Search/searchServices@2020-08-01' = {
 
 resource vision 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
   name: aivision_name
-  location: location
+  location: vision_location
   sku: {
     name: 'S1'
   }
